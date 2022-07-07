@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500&display=swap");
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+/*tableau*/
+table {
+  border-collapse: collapse;
+  color: #404040;
+  /* padding: 50px 0; */
+}
+th {
+  font-size: 16px;
+  border-bottom: 3px solid #ffcb61;
+  padding: 5px 20px;
+  font-weight: 500;
+}
+td {
+  font-weight: 400;
+  padding: 5px 30px;
+  font-size: 14px;
+  text-align: center;
+}
+img {
+  height: 25px;
+}
+tr:nth-child(2n) {
+  background-color: #f6f8f8;
+}
+tr:nth-child(2n) td {
+  border-bottom: 1px solid #e0e0e0;
+  border-top: 1px solid #e0e0e0;
+}
+/*Form CSS*/
+.form {
+  position: absolute;
+  display: flex;
+  width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+}
+.form form {
+  display: flex;
+  width: 350px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.erreur_message {
+  color: red;
+  font-size: 14px;
+}
+label {
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+input {
+  padding: 5px;
+  border: 1px solid #999;
+  outline: 0;
+  margin-top: 2px;
+  border-radius: 20px;
+}
+input:focus {
+  border: 2px solid #0ca11f;
+}
+input[type="submit"] {
+  margin-top: 25px;
+  background-color: #2b5bc4;
+  border: 1px solid #2b5bc4;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: #0ca11f;
+  border: 1px solid #0ca11f;
+}
+
+/* Tableau multi-onglet */
+
+.container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 500px;
+  background: #f1f1f1;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.container-onglets {
+  background: #f1f1f1;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  border-bottom: 1px solid #333;
+}
+
+.onglets {
+  width: 333px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.onglets:not(:nth-child(3)) {
+  border-right: 1px solid #333;
+}
+
+.contenu {
+  margin-top: 50px;
+  width: 100%;
+  height: calc(90% - 50px);
+  position: absolute;
+  opacity: 0;
+  overflow: scroll;
+}
+
+/* Animation */
+
+.active {
+  background: midnightblue;
+  color: #f1f1f1;
+  transition: all 0.3s ease;
+}
+
+.activeContenu {
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  animation: fade 0.5s forwards;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
