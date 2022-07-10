@@ -6,4 +6,4 @@ $id = $_GET['id'];
 //requête de suppression
 $req = mysqli_query($con, "DELETE FROM review WHERE id = $id");
 //redirection vers la page index.php
-header("Location:index.php");
+header("Location:../index.php");

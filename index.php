@@ -36,7 +36,7 @@
                 </tr>
                 <?php
                 //inclure la page de connexion
-                include_once "connexion.php";
+                include_once "./page/connexion.php";
 
                 //requête pour afficher la liste des avis
                 $req = mysqli_query($con, "SELECT * FROM review");
@@ -54,7 +54,7 @@
                             <td><?= $row['Avis'] ?></td>
                             <td><?= $row['Star'] ?></td>
                             <!--Nous alons mettre l'id de chaque avis dans ce lien -->
-                            <td><a href="supprimer.php?id=<?= $row['id'] ?>"><img src="images/trash.png"></a></td>
+                            <td><a href="./page/supprimer.php?id=<?= $row['id'] ?>"><img src="images/trash.png"></a></td>
                         </tr>
                 <?php
                     }
@@ -63,18 +63,14 @@
 
             </table>
 
-
-
         </div>
 
         <div class="contenu" data-anim="2">
-            <p><?php include('ajouter.php'); ?></p>
+            <p><?php include('./page/ajouter.php'); ?></p>
         </div>
 
         <div class="contenu" data-anim="3">
-            <h3>Lorem ipsum dolor sit amet. 3</h3>
-            <hr>
-            <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet it amet Lorem ipsum dolor sit amet </p>
+            <p><?php include('./up/first.php'); ?></p>
         </div>
     </div>
 
