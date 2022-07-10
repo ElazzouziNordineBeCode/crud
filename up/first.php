@@ -33,7 +33,7 @@ $images = $stmt->fetchAll();
 </head>
 
 <body>
-    <form method="post" action=upload.php enctype="multipart/form-data">
+    <form method="post" action="/up/upload.php" enctype="multipart/form-data">
 
         <?php
         if (isset($_GET['error'])) {
@@ -52,7 +52,7 @@ $images = $stmt->fetchAll();
         <div class="gallery">
             <h4>All Images</h4>
             <?php foreach ($images as $image) { ?>
-                <img src="uploads/<?= $image['img_name'] ?>">
+                <img src="/up/uploads/<?= $image['img_name'] ?>">
             <?php } ?>
         </div>
     <?php } ?>

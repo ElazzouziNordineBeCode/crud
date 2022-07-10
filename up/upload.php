@@ -20,14 +20,14 @@ if (isset($_POST['upload'])) {
                 $stmt = $conn->prepare($sql);
                 $stmt->execute([$new_img_name]);
                 move_uploaded_file($tmp_name, $img_upload_path);
-                header("Location: first.php");
+                header("Location: /up/first.php");
             } else {
                 $em = "You can't upload files of this type";
-                header("Location: first.php?error=$em");
+                header("Location: /up/first.php?error=$em");
             }
         } else {
             $em = "Unknown Error Occurred while uploading";
-            header("Location: first.php?error=$em");
+            header("Location: /up/first.php?error=$em");
         }
     }
 }

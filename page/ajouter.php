@@ -40,11 +40,11 @@ if (isset($_POST['button'])) {
     <form action="page/ajouter.php" method="POST">
         <label>Date</label>
         <input type="text" readonly name="Date" value=<?php echo date("Y-m-d"); ?>>
-        <label>Nom</label>
+        <label>Name</label>
         <input type="text" required name="Nom">
         <label>Email</label>
         <input type="text" required name="Email">
-        <label>Avis</label>
+        <label>Review</label>
         <input type="text" required name="Avis">
         <label>Star</label>
         <select name="Star" required>
@@ -55,6 +55,6 @@ if (isset($_POST['button'])) {
             <option value="4/5">4/5</option>
             <option value="5/5">5/5</option>
         </select>
-        <input type="submit" required value="Ajouter" name="button">
+        <input type="submit" required value="Add review" name="button">
     </form>
 </div>
